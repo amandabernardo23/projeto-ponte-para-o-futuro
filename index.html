@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Ponte para o Futuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+        <h1>PONTE PARA O FUTURO</h1>
+      <img src="logo-ponte.png.png" alt="Logo Ponte para o Futuro" class="logo-img" />
+      <nav>
+        <button id="btn-login" class="nav-button active">Login</button>
+        <button id="btn-register" class="nav-button">Registrar</button>
+        <button id="btn-projects" class="nav-button" style="display: none">
+          Projetos
+        </button>
+        <button id="btn-dashboard" class="nav-button" style="display: none">
+          Dashboard
+        </button>
+        <button
+          id="btn-submit-project"
+          class="nav-button"
+          style="display: none"
+        >
+          Submeter Projeto
+        </button>
+        <button
+          id="btn-logout"
+          class="nav-button logout-button"
+          style="display: none"
+        >
+          Sair
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Seção de Introdução -->
+      <section id="intro">
+        <h2>Bem-vindo ao Projeto Ponte para o Futuro</h2>
+        <p>O "Ponte para o Futuro" é uma plataforma inovadora que conecta estudantes da Geração Z com professores, coordenadores e orientadores. Nosso objetivo é facilitar o acesso a oportunidades de aprendizado, promover a colaboração entre acadêmicos e oferecer uma experiência personalizada para cada usuário.</p>
+        <p>Por meio dessa plataforma, buscamos criar um ambiente de aprendizado dinâmico e interativo, onde o desenvolvimento pessoal e acadêmico de cada estudante é o foco principal.</p>
+      </section>
+
+      <!-- Login -->
+      <section id="section-login" class="active-section">
+        <h2>Login</h2>
+        <form id="form-login" class="form">
+          <label for="login-username">Usuário</label>
+          <input
+            type="text"
+            id="login-username"
+            name="login-username"
+            required
+            autocomplete="username"
+          />
+          <label for="login-password">Senha</label>
+          <input
+            type="password"
+            id="login-password"
+            name="login-password"
+            required
+            autocomplete="current-password"
+          />
+          <button type="submit" class="primary-button">Entrar</button>
+        </form>
+      </section>
+
+      <!-- Registro -->
+      <section id="section-register" class="hidden-section">
+        <h2>Registrar Novo Usuário</h2>
+        <form id="form-register" class="form">
+          <label for="register-username">Usuário</label>
+          <input
+            type="text"
+            id="register-username"
+            name="register-username"
+            required
+            autocomplete="username"
+          />
+          <label for="register-password">Senha</label>
+          <input
+            type="password"
+            id="register-password"
+            name="register-password"
+            required
+            autocomplete="new-password"
+          />
+          <label for="register-role">Perfil</label>
+          <select id="register-role" name="register-role" required>
+            <option value="">Selecione</option>
+            <option value="aluno">Aluno</option>
+            <option value="instituicao">Instituição / Empresa</option>
+          </select>
+          <button type="submit" class="primary-button">Registrar</button>
+        </form>
+      </section>
+
+      <!-- Projetos Disponíveis -->
+      <section id="section-projects" class="hidden-section">
+        <h2>Projetos Disponíveis</h2>
+        <div id="projects-list">
+          <!-- Projetos serão carregados aqui via JS -->
+        </div>
+      </section>
+
+      <!-- Dashboard do Estudante -->
+      <section id="section-dashboard" class="hidden-section">
+        <h2>Dashboard</h2>
+        <div id="dashboard-content">
+          <h3>Minhas Candidaturas</h3>
+          <div id="my-applications">
+            <!-- Candidaturas do usuário -->
+          </div>
+          <h3>Minhas Tarefas</h3>
+          <div id="my-tasks">
+            <!-- Tarefas simuladas -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Submeter Projeto - Para Instituições -->
+      <section id="section-submit-project" class="hidden-section">
+        <h2>Submeter Projeto</h2>
+        <form id="form-submit-project" class="form">
+          <label for="project-title">Título do Projeto</label>
+          <input type="text" id="project-title" name="project-title" required />
+          <label for="project-description">Descrição</label>
+          <textarea
+            id="project-description"
+            name="project-description"
+            rows="5"
+            required
+          ></textarea>
+          <label for="project-deadline">Prazo (data final)</label>
+          <input
+            type="date"
+            id="project-deadline"
+            name="project-deadline"
+            required
+          />
+          <button type="submit" class="primary-button">Enviar Projeto</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Ponte para o Futuro - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
