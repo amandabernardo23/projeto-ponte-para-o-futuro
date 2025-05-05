@@ -423,9 +423,7 @@ const STORAGE_KEYS = {
       ];
       salvarTarefas(tarefas);
     }
-  
-    // Verificar se está logado (sessão)
-    // Por enquanto não tem persistência real da sessão
+
   }
   
   window.onload = () => {
